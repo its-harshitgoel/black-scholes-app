@@ -32,16 +32,22 @@ The Black-Scholes model values European options using:
 - **Volatility (σ)**
 - **Risk-free rate (r)**
 
-Equations:
-\[
-d_1 = \frac{\ln(S/K) + (r + \frac{σ^2}{2})T}{σ \sqrt{T}}, \quad d_2 = d_1 - σ \sqrt{T}
-\]
-\[
-C = S N(d_1) - K e^{-rT} N(d_2)
-\]
-\[
-P = K e^{-rT} N(-d_2) - S N(-d_1)
-\]
+#### Equations:
+
+```math
+d_1 = \frac{\ln\left(\frac{S}{K}\right) + \left(r + \frac{\sigma^2}{2}\right)T}{\sigma \sqrt{T}}
+```
+```math
+d_2 = d_1 - \sigma \sqrt{T}
+```
+```math
+C = S \cdot N(d_1) - K \cdot e^{-rT} \cdot N(d_2)
+```
+
+```math
+P = K \cdot e^{-rT} \cdot N(-d_2) - S \cdot N(-d_1)
+```
+Donde N(⋅) es la función de distribución acumulativa normal estándar.
 
 ---
 
@@ -65,11 +71,7 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
-## 🖥️ Application Interface
-![Black-Scholes Option Pricing App](images/app_screenshot.png)
-*Interactive interface showing real-time option pricing and volatility heatmap*
 
----
 
 ## ✨ Key Features
 
@@ -79,4 +81,6 @@ streamlit run app.py
   - Underlying asset price (Spot Price)
   - Market volatility
 
+## 🌐 Live Deployment
 
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://black-scholes-calculator.streamlit.app/)
