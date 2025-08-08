@@ -47,7 +47,7 @@ C = S \cdot N(d_1) - K \cdot e^{-rT} \cdot N(d_2)
 ```math
 P = K \cdot e^{-rT} \cdot N(-d_2) - S \cdot N(-d_1)
 ```
-Donde N(⋅) es la función de distribución acumulativa normal estándar.
+Where N(⋅) is the standard normal cumulative distribution function (CDF)
 
 ---
 
